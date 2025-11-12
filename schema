@@ -1,0 +1,44 @@
+    musicien
+        id_musicien (BIGINT, Clé Primaire)
+        prenom (VARCHAR(50))
+        nom_de_famille (VARCHAR(50))
+        est_responsable (BOOLEAN)
+
+    instruments
+        id_instrument (INTEGER, Clé Primaire)
+        type_instrument (VARCHAR(50))
+        libelle (VARCHAR(100))
+
+    composer
+        id_musicien (BIGINT, Clé Étrangère)
+        id_instrument (INTEGER, Clé Étrangère)
+        Clé Primaire (id_musicien, id_instrument)
+
+    morceau
+        id_morceau (INTEGER, Clé Primaire)
+        utiliser (BOOLEAN)
+        proposer (BOOLEAN)
+
+    proposer
+        id_proposition (INTEGER, Clé Primaire)
+        id_morceau (INTEGER, Clé Étrangère)
+        id_musicien (BIGINT, Clé Étrangère)
+        proposant (BOOLEAN)
+
+    vendredi
+        id_vendredi (INTEGER, Clé Primaire)
+        date (DATE)
+        concert_astree (BOOLEAN)
+
+    créneau
+        id_creneau (INTEGER, Clé Primaire)
+        id_vendredi (INTEGER, Clé Étrangère)
+        heure_debut (TIME)
+        heure_fin (TIME)
+        durée (INTERVAL)
+
+    répéter
+        id_musicien (BIGINT, Clé Étrangère)
+        id_creneau (INTEGER, Clé Étrangère)
+        Clé Primaire (id_musicien, id_creneau)
+

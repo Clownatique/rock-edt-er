@@ -1,0 +1,3 @@
+/home/nestor/bot_discord/build/CMakeFiles/discord-bot.dir
+/home/nestor/bot_discord/build/CMakeFiles/edit_cache.dir
+/home/nestor/bot_discord/build/CMakeFiles/rebuild_cache.dir
